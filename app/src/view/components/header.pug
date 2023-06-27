@@ -1,0 +1,22 @@
+header.header
+    nav.nav 
+        .container.nav__content 
+            a(href="#").logo PORTEN
+            ul.menu
+                -var links = ["Коллекции", "новое", "бренды"]
+                each val in links
+                    li
+                        a(href="#").menu__link= val
+                    
+                
+            ul.service
+                -var icons = ["shop", "search", "burger"] 
+                each val in icons
+                    li
+                        a(href="#" class=`icon-${val} service__link`)
+    .header__content
+        .header__box
+            h1.logo.header__logo PORTEN
+            p.header__title САНКТ-петербург
+        p.header__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus interdum purus, est tortor pulvinar ut in. Fringilla a diam enim sed justo, sed iaculis sagittis. Tortor id eu interdum nec ut iaculis. Penatibus ullamcorper ultricies morbi ipsum sem metus pharetra, mi. Tortor nibh magna feugiat id nunc, dui nisl viverra.
+                

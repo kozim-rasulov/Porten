@@ -1,0 +1,79 @@
+.about {
+    background: url(../img/about-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 80px 0 101px;
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        @include media($sm) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+
+    &__desc {
+        font-size: 14px;
+        line-height: 150%;
+        font-family: $font-pt;
+
+    }
+
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__link {
+        background: $about-link-bg;
+        color: $about-link-color;
+        font-family: $font-pt;
+        font-size: 14px;
+        line-height: 150%;
+        padding: 10px 20px;
+        display: block;
+        &_margin {
+            border: none;
+            font-size: 14px;
+            color: $color;
+            max-width: 140px;
+            width: 100%;
+            @include media($md) {
+                max-width: inherit;
+            }
+            @include media($sm) {
+                max-width: 140px;
+            }
+        }
+    }
+
+    &__form {
+        margin-top: 37px;
+        display: flex;
+        @include media($md) {
+            flex-direction: column;
+        }
+    }
+
+    &__input {
+        padding: 10px 15px;
+        background: $about-input;
+        max-width: 210px;
+        width: 100%;
+        &::placeholder {
+            color: #D9D9D9;
+            font-size: 14px;
+            font-family: $font-pt;
+            line-height: 150%;
+        }
+    }
+}

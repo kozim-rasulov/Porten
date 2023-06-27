@@ -1,0 +1,146 @@
+.nav {
+    background: $nav-bg;
+    backdrop-filter: blur(15px);
+
+    &__content {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        @include media(350px) {
+            flex-direction: column;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    margin-left: auto;
+
+    @include media($sm) {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background: $nav-bg;
+        flex-direction: column;
+        min-width: 150px;
+        // display: none;
+        transform: scaleY(0);
+        transition: 0.5s;
+        transform-origin: top;
+    }
+
+    &.active {
+        // display: flex;
+        transform: scaleY(1);
+    }
+
+    &__link {
+        color: $menu-link;
+        font-family: $font-pt;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 31px 20px;
+        display: block;
+        transition: 0.5s;
+
+        @include media ($sm) {
+            padding: 10px 20px;
+        }
+
+        &:hover {
+            background: $menu-link-bg;
+            color: $menu-link-hover;
+        }
+    }
+}
+
+.service {
+    display: flex;
+
+    @include media($sm) {
+        margin-left: auto;
+    }
+
+    @include media(350px) {
+        margin-left: 0;
+    }
+
+    &__link {
+        color: inherit;
+        margin-left: 42px;
+
+        @include media(350px) {
+            margin: 20px;
+            display: inline-block;
+        }
+    }
+
+    .icon-burger {
+        display: none;
+
+        @include media($sm) {
+            display: block;
+        }
+    }
+}
+
+.header {
+    &__content {
+        background: url('../img/header-bg.jpg') center / cover;
+        background-attachment: fixed;
+        min-height: 80vh;
+        font-family: $font-pt;
+        text-align: center;
+        padding: 20px;
+        @extend .flex
+    }
+
+    &__box {
+        border: 4px solid $color;
+        max-width: 320px;
+        width: 100%;
+        min-height: 320px;
+        @extend .flex;
+        @include media($xs) {
+            max-width: 200px;
+            min-height: 200px;
+        }
+        
+    }
+    &__logo {
+        font-size: 64px;
+        position: relative;
+        @include media($xs) {
+            font-size: 45px;
+        }
+        &::after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: $color;
+            display: block;
+            position: absolute;
+            bottom: 14px;
+            @include media($xs) {
+                bottom: 7px;
+            }
+        }
+    }
+    &__title {
+        font-size: 22px;
+        text-transform: uppercase;
+        margin-top: -7px;
+        @include media($xs) {
+            font-size: 16px;
+            margin-top: 0;
+        }
+    }
+    &__desc {
+        line-height: 150%;
+        max-width: 730px;
+        width: 100%;
+        margin-top: 80px;
+        text-transform: uppercase;
+    }
+}

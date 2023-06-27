@@ -1,0 +1,19 @@
+section.about 
+    .container
+        .about__content
+            .about__card 
+                h3.about__title О магазине
+                p.about__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh. Egestas amet consectetur vel vitae aliquam dictum suspendisse. Lobortis eget consequat, tellus et et sed turpis. Pretium quisque vitae, amet, porttitor odio ultricies massa pharetra leo. Et ipsum urna fames in sit mi ultrices nisi, nunc.
+            .about__card 
+                h3.about__title Категории
+                ul.about__menu
+                    -var links = ["часы", "браслеты", "ремни", "ювелирные изделия", "запонки"];
+                    each val in links
+                        li 
+                            a.about__link(href="#")= val
+            .about__card 
+                h3.about__title РАссылка
+                p.about__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi semper viverra nunc cursus tortor lectus nunc nulla nibh.
+                form.about__form(action="")
+                    input.about__input(type="text", placeholder="Ваша почта")
+                    button.about__link.about__link_margin ПОДПИСАТЬСЯ

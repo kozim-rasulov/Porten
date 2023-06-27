@@ -1,0 +1,22 @@
+.brands {
+    background: $brands-bg;
+    padding: 70px 0 80px;
+    
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        @include media($md) {
+            grid-template-columns: repeat(2, 1fr);
+            place-items: center;
+        }
+        @include media($xs) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__img {
+        max-width: 255px;
+        width: 100%;
+    }
+}

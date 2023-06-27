@@ -1,0 +1,40 @@
+$lg: 1140px;
+$md: 992px;
+$sm: 768px;
+$xs: 576px;
+$gutter: 30px;
+$gutter-side: $gutter / 2;
+
+
+$fonts: ("fontawesome", "light", 300),
+        ("PlayfairDisplay", "Bold", 700),
+        ("PlayfairDisplay", "Regular", 400),
+        ("PostNoBillsJaffna", "Bold", 700),
+        ("PTSans", "Bold", 700),
+        ("PTSans", "Regular", 400);
+
+@each $family, $name, $weight in $fonts {
+    @font-face {
+        font-family: $family;
+        src: url(../fonts/#{$family}/#{$family}-#{$name}.ttf);
+        font-weight: $weight;
+    }
+}
+$font-awesome: "fontawesome";
+$font-play: "PlayfairDisplay";
+$font-post: "PostNoBillsJaffna";
+$font-pt: "PTSans";
+
+$body: #000; 
+$color: #fff;
+$contact-color: #969696;
+$nav-bg: rgba(15, 15, 15, 0.8);
+$menu-link: #969696;
+$menu-link-hover: #fff;
+$menu-link-bg: #1f1f1f;
+$card-bg: #191B1C;
+$collection-bg: rgba(15, 15, 15, 0.5);
+$brands-bg: #0F0F0F;
+$about-link-color: #D0D0D0;
+$about-link-bg: #0F0F0F;
+$about-input: rgba(255, 255, 255, 0.40);

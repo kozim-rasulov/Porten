@@ -1,0 +1,25 @@
+@mixin media($size: $lg) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin container($padding: $gutter-side) {
+    max-width: $lg;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $padding;
+    @include media() {
+        max-width: $md;
+    }
+    @include media($md) {
+        max-width: $sm;
+    }
+    @include media($sm) {
+        max-width: $xs;
+    }
+    @include media($xs) {
+        max-width: 100%;
+    }
+}
+
